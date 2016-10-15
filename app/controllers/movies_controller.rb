@@ -23,7 +23,7 @@ class MoviesController < ApplicationController
       @movies = Movie.where(rating: @selected_ratings)
       return
     else
-      @selected_ratings = []
+      @selected_ratings = @all_ratings
     end
     if params[:sort]
       @sorting = params[:sort]
